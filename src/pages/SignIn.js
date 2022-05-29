@@ -1,4 +1,4 @@
-import FormInput from '../components/FormInput';
+import {FormInput} from '../components/FormInput';
 import Button from '../components/Button';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom'
@@ -23,7 +23,7 @@ function SignIn(){
 
             <FormInput name='user name' type='text'/> 
             <FormInput name='password' type='password'/> 
-            <Button name='sign in' dark={true}/>
+            <Button name='sign in' dark={true} large={true}/>
             </form>
         </Hero>
     )

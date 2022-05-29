@@ -3,3 +3,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transform: all ease-in-out 500; 
+    outline: none;
+}
+html{
+    overflow-x: hidden;
+}
+.scrollbar::-webkit-scrollbar{
+    appearance: none;
+    width: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}

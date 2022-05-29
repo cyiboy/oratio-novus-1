@@ -18,6 +18,9 @@ module.exports = {
         blue: {
           100: '#4F3CC9'
         },
+        green: {
+          100: '#32CD99'
+        },
         grey: {
           100: '#747474',
           200: '#F3F3F3',
@@ -28,10 +31,18 @@ module.exports = {
         sans: ['Poppins', 'sans-serif'],
       },
       width:{
-        'on-lg': '1150px'
+        'on-lg': '1150px',
+        'on-card': '360px'
+      },
+      maxHeight: {
+        100: '550px'
       },
       boxShadow: {
         'on-shadow': '8px 8px 23px rgba(60, 60, 60, 0.15);',
+        'on-shadow-sm': '4px 4px 11px rgba(60, 60, 60, 0.15);',
+      },
+      borderRadius: {
+        'on-md': '10px'
       }
     },
   },

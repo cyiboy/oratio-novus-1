@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-function FormInput({name, type}){
+export const FormInput = ({name, type}) => {
     return(
         <div className='mt-4'>
             <div className="flex justify-between items-center">
@@ -13,4 +13,15 @@ function FormInput({name, type}){
     )
 }
 
-export default FormInput
+export const FormInput2 = ({ name, type, label, placeholder }) => {
+    return(
+        <label htmlFor={ name } className="mb-7">
+            <p className="capitalize text-primary-500 font-medium">{ label }</p>
+            {
+                type === 'input' ?
+                <input type='text' name={ name } id={ name }  className="py-2 px-3 my-1 mb-5 shadow-on-shadow rounded-lg bg-white w-full" placeholder={placeholder}/>:
+                <textarea name="description" className="py-2 px-3 my-1 mb-5 shadow-on-shadow rounded-lg bg-white w-full h-28"></textarea>
+            }
+        </label>
+    )
+}

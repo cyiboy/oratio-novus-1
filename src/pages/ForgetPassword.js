@@ -1,4 +1,4 @@
-import FormInput from '../components/FormInput';
+import { FormInput } from '../components/FormInput';
 import Button from '../components/Button';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ function ForgotPassword(){
                 send you instructions to reset your password.Email Address Submit
             </p>
             <FormInput name='email' type='email'/> 
-            <Button name='submit' dark={true}/>
+            <Button name='submit' dark={true} large={true}/>
             </form>
         </Hero>
     )
