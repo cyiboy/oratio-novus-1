@@ -6,7 +6,7 @@ import { FormInput2 } from '../components/FormInput'
 function AddWord(){
     return(
         <Body>
-            <form className="w-1/2 mx-auto mt-8">
+            <form className="w-11/12 sm:w-10/12 md:w-on-400 mx-auto mt-8">
                 <p className="font-bold text-2xl text-primary-500 text-center mb-11">Add New Word</p>
                 <FormInput2 label="word" name="word" type="input"/>
                 <FormInput2 label="word description" name="description"/>

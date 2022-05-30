@@ -8,7 +8,7 @@ function Signup(){
         <Hero>
             <>
             <p className='absolute text-xs top-7 right-6'>Already a member? <Link to="/sign-in" className='text-blue-100'>sign in now</Link></p>
-            <form className="w-1/2">
+            <form className="w-11/12 sm:w-10/12 md:w-on-400">
             <p className='text-2xl font-bold'>Sign Up</p>
             <div className='border-solid border-b border-primary-300 mb-7'>
                 <button className='flex justify-center w-full py-2 mt-4 mb-6 rounded-lg border-solid border border-primary-300'>

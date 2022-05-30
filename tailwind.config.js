@@ -32,7 +32,13 @@ module.exports = {
       },
       width:{
         'on-lg': '1150px',
-        'on-card': '360px'
+        'on-card': '360px',
+        'on-400': "420px",
+        'on-90': "98%"
+      },
+      screens: {
+        xs: '450px',
+        '2lg': '1200px'
       },
       maxHeight: {
         100: '550px'
@@ -43,6 +49,10 @@ module.exports = {
       },
       borderRadius: {
         'on-md': '10px'
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
       }
     },
   },

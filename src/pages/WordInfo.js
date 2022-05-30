@@ -39,9 +39,11 @@ function WordInfo(){
                     <p className='font-medium text-xs text-grey-300 my-3'>Lorem ipsum dolor sit amet</p>
                 </div>
 
-                <div className='cursor-pointer flex rounded-on-md shadow-on-shadow bg-white py-2 justify-center items-center gap-x-4 w-52'>
-                    <p className='text-2xl'>&#128393;</p>
-                    <p className='text-grey-300'>Edit / Update</p>
+                <div className='cursor-pointer flex rounded-on-md shadow-on-shadow bg-white py-2 justify-center w-14 sm:w-52 items-center gap-x-4'>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.938 5.35597C12.7519 8.53284 9.57043 11.7149 6.39182 14.8993C6.22349 15.0682 6.02277 15.1342 5.80469 15.1775C4.44706 15.4494 3.08943 15.7201 1.73123 15.9897C1.66528 16.003 1.5976 16.0059 1.56174 16.0099C1.10013 16.0065 0.842143 15.653 0.934696 15.1868C1.04287 14.6396 1.15566 14.0935 1.26615 13.5469C1.43737 12.6983 1.61206 11.8509 1.77634 11.0011C1.81279 10.8114 1.89782 10.6633 2.03144 10.5297C5.20773 7.35569 8.38286 4.18171 11.5545 1.00368C11.6806 0.877002 11.7477 0.855599 11.8871 0.996164C13.2297 2.3509 14.5798 3.6987 15.9328 5.04361C16.0549 5.1645 16.0693 5.22524 15.938 5.35597Z" fill="#272738"/>
+                    </svg>
+                    <p className='text-grey-300 hidden sm:block'>Edit / Update</p>
                 </div>
             </div>
 
@@ -55,7 +57,7 @@ function WordInfo(){
                     onClick={() => setActive('history')}>History</div>
                 </div>
                 <div 
-                className='relative flex justify-center items-center scrollbar bg-primary-200 w-full rounded-lg flex-col shadow-on-shadow max-h-100 mb-10 px-9 overflow-y-auto'>
+                className='relative flex justify-center items-center scrollbar bg-primary-200 w-full rounded-lg flex-col shadow-on-shadow max-h-100 mb-10 px-5 sm:px-9 overflow-y-auto'>
                     {/* <NoComment /> */}
                     <div className='my-9 overflow-y-auto scrollbar h-full w-full'>
                         {
@@ -74,7 +76,7 @@ function WordInfo(){
                     </div>
                     {
                         active === 'discussion' &&
-                        <div className='absolute flex justify-between mx-9 items-center bottom-0 left-0 right-0 bg-primary-200 pb-5 pt-2'>
+                        <div className='absolute flex justify-between gap-6 mx-5 sm:mx-9 items-center bottom-0 left-0 right-0 bg-primary-200 pb-5 pt-2'>
                             <input 
                             type='text' 
                             placeholder="Type something"
