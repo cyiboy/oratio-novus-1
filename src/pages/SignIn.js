@@ -2,12 +2,29 @@ import {FormInput} from '../components/FormInput';
 import Button from '../components/Button';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 function SignIn(){
+    let initialValues = {
+        username: '',
+        password: ''
+    }
+    let validationSchema = () => {
+        return Yup.object({
+            username: Yup.string().required('username field isRequired'),
+            password: Yup.string().min(6, 'Plese enter a password withe min of 6 characters').required('password field isRequired')
+        })
+    }
+    let onSubmit = value => {
+        console.log(value)
+    }
+
+    const formik = useFormik({initialValues, validationSchema, onSubmit})
     return(
         <Hero>
             <p className='absolute text-xs top-7 right-6'>Not a member? <Link to="/sign-up" className='text-blue-100'>sign up now</Link></p>
-            <form className="w-11/12 sm:w-10/12 md:w-on-400">
+            <form className="w-11/12 sm:w-10/12 md:w-on-400" onSubmit={formik.handleSubmit}>
             <p className='text-2xl font-bold'>Sign in</p>
             <div className='border-solid border-b border-primary-300 mb-7'>
                 <button className='flex justify-center w-full py-2 mt-4 mb-6 rounded-lg border-solid border border-primary-300'>
@@ -21,9 +38,9 @@ function SignIn(){
                 </button>
             </div>
 
-            <FormInput name='user name' type='text'/> 
-            <FormInput name='password' type='password'/> 
-            <Button name='sign in' dark={true} large={true}/>
+            <FormInput name='username' type='text' formik={formik}/> 
+            <FormInput name='password' type='password' formik={formik}/> 
+            <Button name='sign in' dark={true} large={true} type="submit"/>
             </form>
         </Hero>
     )

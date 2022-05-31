@@ -15,6 +15,7 @@ module.exports = {
         },
         white: '#FFFFFF',
         black: '#000',
+        error: 'crimson',
         blue: {
           100: '#4F3CC9'
         },
@@ -24,7 +25,8 @@ module.exports = {
         grey: {
           100: '#747474',
           200: '#F3F3F3',
-          300: '#8B8B9E'
+          300: '#8B8B9E',
+          400: '#D9D9D9'
         }
       },
       fontFamily:{
@@ -38,6 +40,7 @@ module.exports = {
       },
       screens: {
         xs: '450px',
+        '2md': '800px',
         '2lg': '1200px'
       },
       maxHeight: {

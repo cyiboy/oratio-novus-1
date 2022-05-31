@@ -1,7 +1,7 @@
 
-function Button({name, dark, large}){
+function Button({name, dark, large, type}){
     return(
-        <button 
+        <button type={type} 
         className={`capitalize text-center py-2 ${dark ? 'bg-primary-500 text-white' : 'bg-primary-200 text-black'} rounded-lg text-xs ${large ? 'w-48' : 'w-32'}  my-4`}>
             { name }
         </button>

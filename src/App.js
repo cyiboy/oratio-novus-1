@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import WordInfo from './pages/WordInfo';
 import AddWord from './pages/AddWord';
 import Profile from './pages/Profile';
+// import Loader from './components/Loader';
 
 function App() {
   return (
