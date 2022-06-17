@@ -1,11 +1,11 @@
 import images from '../assets/images'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 function Header(){
     let location = useLocation()
     return(
         <header className="flex w-full items-center justify-between my-3 py-1 sticky inset-0 bg-grey-200 z-50 backdrop-blur-sm">
-            <p className="font-bold text-xl xs:text-2xl">Oratio Novus</p>
+            <Link to='/' className="font-bold text-xl xs:text-2xl">Oratio Novus</Link>
 
             {
                 location.pathname === '/' &&
@@ -30,8 +30,8 @@ function Header(){
                     <img src={images.profilePics} alt='profile' className='object-cover h-full w-full'/>
                 </div>
                 
-                <ul className='absolute top-full right-5 mt-3 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>
-                    <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer'>Profile</li>
+                <ul className='absolute top-full right-5 mt-1 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>
+                    <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer'><Link to="profile">Profile</Link></li>
                     <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer  border-grey-100'>Personal Word</li>
                     <li className='flex justify-between w-full py-2 text-sm text-primary-500 px-4 hover:bg-primary-100 cursor-pointer'>
                         <p>sign out</p>

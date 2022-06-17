@@ -2,8 +2,9 @@ import Body from '../components/Body'
 import images from '../assets/images'
 import Button from '../components/Button'
 import { FormInput2 } from '../components/FormInput'
-import { useLocation } from 'react-router-dom'
 import { useState } from 'react'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 function Profile(){
     let [image, setImage] = useState(images.profilePics)
@@ -15,8 +16,27 @@ function Profile(){
             setImage(reader.result)
         }
     }
+    let initialValues = {
+        word: '',
+        description: '',
+        reference: '',
+        origin: ''
+    }
+    let validationSchema = () => {
+        return Yup.object({
+            word: Yup.string().required('word field is Required'),
+            description: Yup.string().required('description field is Required'),
+            reference: Yup.string().required('reference field is Required'),
+            origin: Yup.string().required('origin field isRequired')
+        })
+    }
+    let onSubmit = value => {
+        console.log(value)
+    }
+
+    let formik = useFormik({initialValues, validationSchema, onSubmit})
     return(
-        <Body location={useLocation}>
+        <Body>
             <div className='w-full  xs:w-11/12 mx-auto'>
                 <p className="font-bold text-2xl text-primary-500 text-center mb-11">Profile</p>
                 <div className='flex flex-col md:flex-row justify-between w-full mx-auto'>
@@ -44,15 +64,15 @@ function Profile(){
                         </div> */}
                     </div>
                     <div className='w-full md:w-5/12'>
-                        <form>
+                        <form onSubmit={formik.handleSubmit}>
                             <p className="text-primary-500 text-lg font-bold mb-5 text-center md:text-left">Details</p>
-                            <FormInput2 label="user Name" name="username" type="input" placeholder="Johndoe91"/>
+                            <FormInput2 label="user Name" name="username" type="input" placeholder="Johndoe91" formik={formik}/>
                             <div className='flex justify-between gap-5'>
-                                <FormInput2 label="first Name" name="firstName" type="input" placeholder="John"/>
-                                <FormInput2 label="D.O.B" name="DOB" type="input" placeholder="DD/MM/YYYY"/>
+                                <FormInput2 label="first Name" name="firstName" type="input" placeholder="John" formik={formik}/>
+                                <FormInput2 label="D.O.B" name="DOB" type="input" placeholder="DD/MM/YYYY" formik={formik}/>
                             </div>
                             <div className='flex justify-between gap-5 border-b border-solid border-grey-300 mb-3'>
-                                <FormInput2 label="last Name" name="lastName" type="input" placeholder="Doe"/>
+                                <FormInput2 label="last Name" name="lastName" type="input" placeholder="Doe" formik={formik}/>
                                 <div className='flex flex-col gap-1 w-6/12'>
                                     <p className="capitalize text-primary-500 font-medium">Gender</p>
                                     <label htmlFor='male'>
@@ -68,11 +88,12 @@ function Profile(){
                             <FormInput2 
                             label="bio" 
                             name="bio" 
+                            formik={formik}
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim luctus leo, vel suscipit elit"/>
 
                             <div className="w-full flex justify-end gap-4">
                                 <Button dark={false} name="back" large={false}/>
-                                <Button dark={true} name="save" large={false}/>
+                                <Button dark={true} name="save" large={false} type="submit"/>
                             </div>
                         </form>
                     </div>
