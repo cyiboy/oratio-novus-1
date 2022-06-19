@@ -30,7 +30,7 @@ function Header(){
                     <img src={images.profilePics} alt='profile' className='object-cover h-full w-full'/>
                 </div>
                 
-                <ul className='absolute top-full right-5 mt-1 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>
+                <ul className='absolute top-full right-5 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>
                     <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer'><Link to="profile">Profile</Link></li>
                     <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer  border-grey-100'>Personal Word</li>
                     <li className='flex justify-between w-full py-2 text-sm text-primary-500 px-4 hover:bg-primary-100 cursor-pointer'>
