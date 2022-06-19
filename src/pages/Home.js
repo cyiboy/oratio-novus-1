@@ -5,7 +5,7 @@ import Card from '../components/Card'
 function Home(){
     return(
         <Body>
-            <div className='relative on-grid gap-y-8 w-full h-full mt-6'>
+            <div className='relative on-grid gap-y-14 gap-x-16 w-full h-full mt-6'>
                 <Card /> <Card /> <Card />
                 <Card /> <Card /> <Card />
                 <Card /> <Card /> <Card />

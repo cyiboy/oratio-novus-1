@@ -26,11 +26,12 @@ html{
 .on-grid{
     display: grid;
     grid-template-columns:  repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 12px;
+    /* gap: 12px; */
     margin-top: 1rem;
 }
 @media screen and (max-width: 700px){
     .on-grid{
         grid-template-columns:  repeat(auto-fit, minmax(15rem, 1fr));
+        /* gap: ; */
     }
 }
