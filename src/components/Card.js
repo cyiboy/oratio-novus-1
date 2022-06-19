@@ -5,7 +5,7 @@ import RoundImg from './RoundImg'
 
 function Card(){
     return(
-        <Link to="/word/1" className='group bg-white hover:bg-primary-500 rounded-on-md p-4 2lg:w-on-card h-fit shadow-on-shadow' data-aos="Link-in">
+        <Link to="/word-info/1" className='group bg-white hover:bg-primary-500 rounded-on-md p-4 2lg:w-on-card h-fit shadow-on-shadow' data-aos="Link-in">
             <div className='flex justify-between items-center'>
                 <div className='flex gap-3 items-center'>
                     <RoundImg img={images.profilePics} />
