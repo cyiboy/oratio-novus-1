@@ -33,13 +33,13 @@ function Header(){
                 <ul className='absolute top-full right-5 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>
                     <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer'><Link to="/profile">Profile</Link></li>
                     <li className='w-full py-2 text-sm text-primary-500 pl-4 hover:bg-primary-100 cursor-pointer  border-grey-100'>Personal Word</li>
-                    <li className='flex justify-between w-full py-2 text-sm text-primary-500 px-4 hover:bg-primary-100 cursor-pointer'>
+                    <Link to="/login" className='flex justify-between w-full py-2 text-sm text-primary-500 px-4 hover:bg-primary-100 cursor-pointer'>
                         <p>sign out</p>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.43424 3C2.78991 3 2.26758 3.52233 2.26758 4.16667V15.8333C2.26758 16.4777 2.78991 17 3.43424 17H10.4342C11.0786 17 11.6009 16.4777 11.6009 15.8333V15.25H5.51763C4.6892 15.25 4.01763 14.5784 4.01763 13.75V6.25C4.01763 5.42157 4.6892 4.75 5.51763 4.75H11.6009V4.16667C11.6009 3.52233 11.0786 3 10.4342 3H3.43424Z" fill="#272738"/>
                             <path d="M13.5335 6.17315C13.2946 6.4101 13.2946 6.79286 13.5335 7.02981L15.9038 9.3932L6.61248 9.3932C6.27562 9.3932 6 9.6666 6 10.0008C6 10.3349 6.27562 10.6083 6.61248 10.6083L15.9038 10.6083L13.5274 12.9656C13.2885 13.2026 13.2885 13.5853 13.5274 13.8223C13.7662 14.0592 14.1521 14.0592 14.391 13.8223L17.8209 10.426C18.0597 10.1891 18.0597 9.80634 17.8209 9.5694L14.3971 6.17315C14.1582 5.94228 13.7662 5.94228 13.5335 6.17315Z" fill="#272738"/>
                         </svg>
-                    </li>
+                    </Link>
                 </ul>
             </div>
         </header>

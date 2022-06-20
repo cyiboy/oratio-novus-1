@@ -1,10 +1,13 @@
 import Body from "../components/Body"
 import Button from "../components/Button"
+import { useNavigate } from "react-router-dom";
 import { FormInput2 } from '../components/FormInput'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 function AddWord(){
+    const navigate = useNavigate();
+
     let initialValues = {
         word: '',
         description: '',
@@ -33,7 +36,7 @@ function AddWord(){
                 <FormInput2 label="reference" name="reference" type="input" formik={formik}/>
                 <FormInput2 label="origin" name="origin" type="input" formik={formik}/>
                 <div className="w-full flex justify-end gap-4">
-                    <Button dark={false} name="back" large={false}/>
+                    <Button dark={false} name="back" large={false} handleClick={() => navigate(-1)}/>
                     <Button dark={true} name="add word" large={false} type="submit"/>
                 </div>
             </form>

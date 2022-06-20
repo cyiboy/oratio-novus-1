@@ -3,11 +3,13 @@ import images from '../assets/images'
 import Button from '../components/Button'
 import { FormInput2 } from '../components/FormInput'
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 function Profile(){
     let [image, setImage] = useState(images.profilePics)
+    const navigate = useNavigate();
 
     function changeImage(e){
         let reader = new FileReader()
@@ -92,7 +94,7 @@ function Profile(){
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim luctus leo, vel suscipit elit"/>
 
                             <div className="w-full flex justify-end gap-4">
-                                <Button dark={false} name="back" large={false}/>
+                                <Button dark={false} name="back" large={false} handleClick={() => navigate(-1)}/>
                                 <Button dark={true} name="save" large={false} type="submit"/>
                             </div>
                         </form>
