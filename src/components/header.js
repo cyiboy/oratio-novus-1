@@ -4,7 +4,7 @@ import { useLocation, Link } from 'react-router-dom'
 function Header(){
     let location = useLocation()
     return(
-        <header className="flex w-screen items-center justify-between my-3 py-1 sticky inset-0 bg-grey-200 z-50 backdrop-blur-sm">
+        <header className="flex w-full items-center justify-between my-3 py-1 sticky inset-0 bg-grey-200 z-50 backdrop-blur-sm">
             <Link to='/' className="font-bold text-xl xs:text-2xl">Oratio Novus</Link>
 
             {
