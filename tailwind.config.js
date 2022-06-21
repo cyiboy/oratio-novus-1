@@ -53,6 +53,9 @@ module.exports = {
       borderRadius: {
         'on-md': '10px'
       },
+      gap: {
+        '18': '68px'
+      },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',

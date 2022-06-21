@@ -28,7 +28,7 @@ function SignIn(){
         <Hero>
             <div className='absolute top-7 right-6 w-full flex justify-between items-center'>
                 <div 
-                className='w-11 h-11 rounded-full border flex justify-center items-center sm:translate-x-14'
+                className='w-7 h-7 rounded-full border flex justify-center items-center translate-x-14'
                 onClick={() => navigate(-1)}>
                     <i className="fa-solid fa-angle-left"></i>
                 </div>
