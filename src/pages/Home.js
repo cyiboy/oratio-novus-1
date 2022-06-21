@@ -8,12 +8,6 @@ function Home(){
         <Body>
             <div className='relative on-grid gap-y-14 gap-x-16 w-full h-full mt-6'>
                 <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
-                <Card /> <Card /> <Card />
                 <Link to="/add" className='fixed bottom-4 right-5 cursor-pointer flex rounded-on-md shadow-on-shadow bg-white py-2 justify-center items-center gap-x-4 w-14 sm:w-64'>
                     <p className='text-3xl'>&#43;</p>
                     <p className='text-grey-300 hidden sm:block'>Add new Word</p>

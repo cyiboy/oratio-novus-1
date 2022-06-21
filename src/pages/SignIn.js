@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import {FormInput} from '../components/FormInput';
 import Button from '../components/Button';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom'
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
 
 function SignIn(){
+    const navigate = useNavigate();
+
     let initialValues = {
         username: '',
         password: ''
@@ -23,7 +26,14 @@ function SignIn(){
     const formik = useFormik({initialValues, validationSchema, onSubmit})
     return(
         <Hero>
-            <p className='absolute text-xs top-7 right-6'>Not a member? <Link to="/sign-up" className='text-blue-100'>sign up now</Link></p>
+            <div className='absolute top-7 right-6 w-full flex justify-between items-center'>
+                <div 
+                className='w-11 h-11 rounded-full border flex justify-center items-center translate-x-14'
+                onClick={() => navigate(-1)}>
+                    <i className="fa-solid fa-angle-left"></i>
+                </div>
+                <p className='text-xs'>Not a member? <Link to="/sign-up" className='text-blue-100'>sign up now</Link></p>
+            </div>
             <form className="w-11/12 sm:w-10/12 md:w-on-400" onSubmit={formik.handleSubmit}>
             <p className='text-2xl font-bold'>Sign in</p>
             <div className='border-solid border-b border-primary-300 mb-7'>

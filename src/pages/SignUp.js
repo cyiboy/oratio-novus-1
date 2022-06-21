@@ -2,10 +2,13 @@ import {FormInput} from '../components/FormInput';
 import Button from '../components/Button';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 function Signup(){
+    const navigate = useNavigate();
+
     let initialValues = {
         name: '',
         username: '',
@@ -28,7 +31,14 @@ function Signup(){
     return(
         <Hero>
             <>
-            <p className='absolute text-xs top-7 right-6'>Already a member? <Link to="/sign-in" className='text-blue-100'>sign in now</Link></p>
+            <div className='absolute top-7 right-6 w-full flex justify-between items-center'>
+                <div 
+                className='w-11 h-11 rounded-full border flex justify-center items-center translate-x-14'
+                onClick={() => navigate(-1)}>
+                    <i className="fa-solid fa-angle-left"></i>
+                </div>
+                <p className='text-xs'>Already a member? <Link to="/sign-in" className='text-blue-100'>sign in now</Link></p>
+            </div>
             <form className="w-11/12 sm:w-10/12 md:w-on-400" onSubmit={formik.handleSubmit}>
             <p className='text-2xl font-bold'>Sign Up</p>
             <div className='border-solid border-b border-primary-300 mb-7'>
