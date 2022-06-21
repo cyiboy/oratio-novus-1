@@ -41,7 +41,7 @@ module.exports = {
       screens: {
         xs: '450px',
         '2md': '800px',
-        '2lg': '1200px'
+        '2lg': '1350px'
       },
       maxHeight: {
         100: '550px'
