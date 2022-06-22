@@ -5,7 +5,7 @@ function Header(){
     let location = useLocation()
     return(
         <header className="flex w-full items-center justify-between my-3 py-1 sticky inset-0 bg-grey-200 z-50 backdrop-blur-sm">
-            <Link to='/' className="font-bold text-xl xs:text-2xl">Oratio Novus</Link>
+            <Link to='/' className="font-bold text-[32px] xs:text-2xl">Oratio Novus</Link>
 
             {
                 location.pathname === '/' &&
