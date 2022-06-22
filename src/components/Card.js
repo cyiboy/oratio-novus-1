@@ -8,14 +8,14 @@ function Card(){
         <Link to="/word-info/1" className='group bg-white hover:bg-primary-500 rounded-on-md p-4 2lg:w-on-card h-fit shadow-on-shadow' data-aos="Link-in">
             <div className='flex justify-between items-center'>
                 <div className='flex gap-3 items-center'>
-                    <RoundImg img={images.profilePics} />
-                    <p className='text-sm text-grey-300 capitalize'>john doe</p>
+                    <RoundImg img={images.cardProfile} />
+                    <p className='text-sm text-grey-300 capitalize'>IO-Labs</p>
                 </div>
                 <div className='py-1 px-4 rounded-full shadow'>
                     <p className='text-sm text-grey-300 capitalize'>4.8</p>
                 </div>
             </div>
-            <div className='border-b border-solid border-grey-200 py-5'>
+            <div className='border-b border-solid border-grey-300 py-6'>
                 <p className='font-bold text-lg group-hover:text-white'>Ball</p>
                 <div className='flex gap-2 items-center'>
                     <p className='text-grey-300'>[ba-ll]</p>
@@ -27,7 +27,8 @@ function Card(){
                     </svg>
                 </div>
             </div>
-            <p className='font-bold text-xs text-grey-300 my-3'>football</p>
+
+            <p className='font-bold text-s text-grey-300 my-2'>football</p>
         </Link>
     )
 }

@@ -3,7 +3,10 @@ const image = {
     profile: require('./profile.png'),
     userImg: require('./user-img.png'),
     noComment: require('./no-comment.png'),
-    profilePics: require('./profile_pics.jpg')
+    profilePics: require('./profile2.png'),
+    profilePic: require('./profile3.png'),
+    cardProfile: require('./card-profile.png')
+
 }
 
 export default image

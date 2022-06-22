@@ -8,7 +8,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 function Profile(){
-    let [image, setImage] = useState(images.profilePics)
+    let [image, setImage] = useState(images.profilePic)
     const navigate = useNavigate();
 
     function changeImage(e){
