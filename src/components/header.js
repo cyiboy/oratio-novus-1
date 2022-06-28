@@ -5,7 +5,7 @@ function Header(){
     let location = useLocation()
     return(
         <header className="flex w-full items-center justify-between my-3 py-1 sticky inset-0 bg-grey-200 z-50 backdrop-blur-sm">
-            <Link to='/' className="font-bold  xs:text-[28px]">Oratio Novus</Link>
+            <Link to='/' className="font-bold hero xs:text-[28px]">Oratio Novus</Link>
 
             {
                 location.pathname === '/' &&
@@ -26,8 +26,8 @@ function Header(){
                 </div>)
             }
             <div className='relative group'>
-                <div className="w-12 h-12 ml-auto rounded-full overflow-hidden">
-                    <img src={images.profilePics} alt='profile' className='object-cover h-full w-full'/>
+                <div className="w-12 h-12 rounded-full">
+                    <img src={images.profilePics} alt='profile'/>
                 </div>
                 
                 <ul className='absolute top-full right-5 bg-white py-5 w-40 rounded-b-on-md rounded-tl-on-md shadow-on-shadow-sm hidden group-hover:block -translate-y-full group-hover:translate-y-0 origin-top-right'>

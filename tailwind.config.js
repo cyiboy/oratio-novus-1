@@ -34,14 +34,17 @@ module.exports = {
       },
       width:{
         'on-lg': '1150px',
-        'on-card': '360px',
+        'on-card': '343.5px',
         'on-400': "420px",
         'on-90': "98%"
+      },
+      fontSize:{
+        hero: '32px'
       },
       screens: {
         xs: '450px',
         '2md': '800px',
-        '2lg': '1350px'
+        '2lg': '1350px',
       },
       maxHeight: {
         100: '550px'
@@ -54,7 +57,7 @@ module.exports = {
         'on-md': '10px'
       },
       gap: {
-        '18': '68px'
+        '18': '18px'
       },
       transitionProperty: {
         'height': 'height',
